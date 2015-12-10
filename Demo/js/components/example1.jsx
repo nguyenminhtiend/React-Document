@@ -1,9 +1,15 @@
-﻿var MyComponent = React.createClass({
+﻿
+var MyComponent = React.createClass({
+    propTypes: {
+        requiredFunc: React.PropTypes.func.isRequired
+    },
+    //getDefaultProps: function(){
+    //    return {
+    //        name: "messi"
+    //    };
+    //},
     render: function () {
-        return (<div>
-                Hello chu Hung!
-            </div>
-            );
+        return (<h1>Hello abc!</h1>);
     }
 });
 
