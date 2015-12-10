@@ -1,16 +1,36 @@
 ﻿
 var MyComponent = React.createClass({
-    propTypes: {
-        requiredFunc: React.PropTypes.func.isRequired
+    getDefaultProps: function(){
+        return {
+            name: "messi"
+        };
     },
-    //getDefaultProps: function(){
-    //    return {
-    //        name: "messi"
-    //    };
-    //},
     render: function () {
-        return (<h1>Hello abc!</h1>);
+        return (<h1>Hello {this.props.name}!</h1>);
     }
 });
 
-React.render(<MyComponent />, document.getElementById("example"));
+    var Counter = React.createClass({
+        incrementCount: function(){
+            this.setState({
+                count: this.state.count + 1
+            });
+        },
+        getInitialState: function(){
+            return {
+                count: 0
+            }
+        },
+        render: function(){
+            return (
+              <div className="my-component">
+                <h1>Count: {this.state.count}</h1>
+                <button type="button" onClick={this.incrementCount}>Increment</button>
+              </div>
+          );
+        }
+    });
+
+
+
+React.render(<Counter />, document.getElementById("example"));
