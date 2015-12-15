@@ -1,43 +1,36 @@
 ﻿
 
-    var DefaultNameMixin = {
-        getDefaultProps: function () {
-            return {
-                name: "Messi"
-            };
-        }
-    };
+var HeaderComponent = React.createClass({
+    render: function () {
+        console.log('Header render');
+        return (<div>This is header</div>);
+    }
+});
 
-    var MyComponent = React.createClass({
-        mixins: [DefaultNameMixin],
+var BodyComponent = React.createClass({
+    render: function () {
+        console.log('Body render');
+        return (<div>This is body</div>);
+    }
+});
+
+var FooterComponent = React.createClass({
+    render: function () {
+        console.log('Footer render');
+        return (<div>This is footer</div>);
+    }
+});
+
+    var App = React.createClass({
         render: function () {
-            return (<h1>Hello {this.props.name}!</h1>);
+            return (<div>
+                        <HeaderComponent />
+                        <BodyComponent />
+                        <FooterComponent />
+                    </div>);
         }
     });
 
 
 
-    //var Counter = React.createClass({
-    //    incrementCount: function(){
-    //        this.setState({
-    //            count: this.state.count + 1
-    //        });
-    //    },
-    //    getInitialState: function(){
-    //        return {
-    //            count: 0
-    //        }
-    //    },
-    //    render: function(){
-    //        return (
-    //          <div className="my-component">
-    //            <h1>Count: {this.state.count}</h1>
-    //            <button type="button" onClick={this.incrementCount}>Increment</button>
-    //          </div>
-    //      );
-    //    }
-    //});
-
-
-
-React.render(<MyComponent />, document.getElementById("example"));
+React.render(<App />, document.getElementById("example"));
