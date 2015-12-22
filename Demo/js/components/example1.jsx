@@ -1,4 +1,8 @@
-﻿
+﻿var Input = React.createClass({
+    render: function () {
+        return (<div>This is header</div>);
+    }
+});
 
 var HeaderComponent = React.createClass({
     render: function () {
@@ -24,6 +28,7 @@ var FooterComponent = React.createClass({
     var App = React.createClass({
         render: function () {
             return (<div>
+                        <Input />
                         <HeaderComponent />
                         <BodyComponent />
                         <FooterComponent />
