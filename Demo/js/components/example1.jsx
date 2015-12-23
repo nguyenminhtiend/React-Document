@@ -38,4 +38,4 @@ var FooterComponent = React.createClass({
 
 
 
-React.render(<App />, document.getElementById("example"));
+React.render(<App />, document.getElementById("example"));          
