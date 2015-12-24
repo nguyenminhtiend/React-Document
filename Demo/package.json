@@ -1,0 +1,33 @@
+{
+  "author": "Tien Nguyen Minh",
+  "name": "ReactJS",
+  "version": "0.0.1",
+  "devDependencies": {
+    "bootstrap": "^3.3.5",
+    "browserify": "^11.2.0",
+    "classnames": "^2.2.0",
+    "es6-promise": "^3.0.2",
+    "flux": "^2.1.1",
+    "font-awesome": "^4.4.0",
+    "gulp": "^3.9.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-connect": "^2.2.0",
+    "gulp-install": "^0.6.0",
+    "gulp-jshint": "^1.12.0",
+    "gulp-open": "^1.0.0",
+    "gulp-react": "^3.0.1",
+    "moment": "^2.10.6",
+    "react": "^0.14.0",
+    "react-datepicker": "^0.15.2",
+    "react-dom": "^0.14.2",
+    "react-router": "^0.13.5",
+    "react-time": "^4.0.0",
+    "reactify": "^1.1.1",
+    "superagent": "^1.4.0",
+    "vinyl-buffer": "^1.0.0",
+    "vinyl-source-stream": "^1.1.0"
+  },
+  "dependencies": {
+    "object-assign": "^4.0.1"
+  }
+}

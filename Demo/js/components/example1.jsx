@@ -39,12 +39,3 @@ var FooterComponent = React.createClass({
 
 
 React.render(<App />, document.getElementById("example"));          
-
-
-var ABc = React.createClass({
-    render: function () {
-        return (<div>
-            This is my component!
-        </div>);
-    }
-});
