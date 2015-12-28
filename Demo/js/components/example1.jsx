@@ -1,6 +1,10 @@
-﻿var Input = React.createClass({
+﻿
+var Input = React.createClass({
+    propTypes: {
+        name: React.PropTypes.string.isRequired,
+    },
     render: function () {
-        return (<div>This is header</div>);
+        return (<div>This is {this.props.name}</div>);
     }
 });
 
@@ -38,4 +42,4 @@ var FooterComponent = React.createClass({
 
 
 
-React.render(<App />, document.getElementById("example"));          
+React.render(<Input />, document.getElementById("example"));          
