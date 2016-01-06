@@ -1,3 +1,5 @@
 ﻿var ReactDOM = require('react-dom');
+var React = require('react');
+var HelloWorld = require('./components/helloWorld.jsx');
 
-ReactDOM.render(<ToDoApp />, document.getElementById("app"));
+ReactDOM.render(<HelloWorld />, document.getElementById("app"));

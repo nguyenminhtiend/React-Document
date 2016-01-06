@@ -1,11 +1,18 @@
 "use strict";
 
 var gulp = require('gulp');
-var source = require('vinyl-source-stream');
+var connect = require('gulp-connect');
 var browserify = require('browserify');
 var reactify = require('reactify');
+var source = require('vinyl-source-stream');
 
-gulp.task('browserify', function () {
+gulp.task('webserver', function () {
+    connect.server({
+        livereload: true
+    });
+});
+
+gulp.task('js', function () {
     browserify('./app/main.js')
 		.transform(reactify)
 		.bundle()
@@ -13,4 +20,4 @@ gulp.task('browserify', function () {
 		.pipe(gulp.dest('./dist'));
 });
 
-gulp.task('default', ['html', 'js', 'css', 'lint', 'open', 'watch']);
+gulp.task('default', ['webserver', 'js']);
